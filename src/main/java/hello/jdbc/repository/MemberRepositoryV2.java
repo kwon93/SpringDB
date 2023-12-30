@@ -122,7 +122,6 @@ public class MemberRepositoryV2 {
         }finally {
             close(con,psmt,null);
         }
-
     }
 
     public void update(Connection con,String memberId, int money) throws SQLException {
@@ -146,7 +145,6 @@ public class MemberRepositoryV2 {
             JdbcUtils.closeResultSet(rs);
             JdbcUtils.closeStatement(psmt);
         }
-
     }
     public void delete(String memberId)throws SQLException{
         String sql = "delete from member where member_id = ?";
